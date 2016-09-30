@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Network Analysis: PageRank Algo 
+        </title>
+        <link rel="stylesheet" href="/css/reset.css" type="text/css" />
+        <script type="text/javascript" src="/js/d3.js"></script>
+        <!--<script type="text/javascript" src="/js/queue.js"></script>-->
+        <script type="text/javascript" src="/js/pagerank.js"></script>
+        <link rel="stylesheet" href="/css/pagerank.css" type="text/css" />
+        <script> var counts = {{ test |tojson |safe }}; </script>
+    </head>
+    <body>
+        <div>
+            <center><h2>THEORETICAL IDENTIFICATION OF VULNERABLE NODE</h2></center>
+            
+        </div>
+        <div class="container">
+            <div id ="theoretical">
+                <form action="/pr" method="post">
+                    HELLO
+                <input type="submit" value="Visualize" onclick="createViz()">
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
