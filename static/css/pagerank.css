@@ -1,0 +1,111 @@
+body{
+    /*COLOR PALETTE : 395BBF F2BE5C F29544 F26D3D F26D3D
+                    : 3D454E 7D8FA2;
+    */
+    background-color: #E1E1E1;
+    color: #000000;
+}
+
+.viz-head{
+    min-width: 200px;
+    font-size: 15px;
+    color: #F2F2F2;
+    border-radius: 5px 5px 0px 0px;
+    margin: 10px 10px 0px 10px;
+}
+
+.theoretical{
+   background-color: #34B3E4;
+}
+
+.practical{
+    background-color: #92C749;
+}
+
+.viz-body{
+    background-color: #F2F2F2;
+    color:blue;
+    min-width: 200px;
+    min-height: 500px;
+    border-color: black;
+    border-width: 2px;
+    border-radius: 0px 0px 5px 5px;
+    margin: 0px 10px 10px 10px;
+}
+
+.black{
+    color : black;
+}
+
+.node {
+    fill: #E1E1E1;
+    stroke: #00AEB3;
+    stroke-width: 2px;
+}
+
+.link {
+    stroke: #B3B5B7;
+    stroke-width: 3px;
+}
+
+
+.label {
+  fill: #000;
+  color:#000;
+  font: 20px sans-serif;
+  pointer-events: none;
+}
+
+#splash{
+    visibility: hidden;
+    position : absolute;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+    background-color: white;
+    
+}
+
+#config{
+    visibility: hidden;
+    position : absolute;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+    background-color: #F2F2F2;
+    
+}
+
+#configInstruction{
+    font-size: 15px;
+    font-weight: bolder;
+    color : #0B4971;
+}
+
+.tip{
+    background-color: black;
+    opacity: 0.9;
+    border-width: 2px;
+    border-color: white;
+    color : orange;
+    width : 150px;
+    height: 100px;
+    border-style: solid;
+}
+
+#trxList{
+    height: 75px;
+    
+    visibility: hidden;
+    z-index: 10;
+    overflow: auto;
+    border-width: 2px;
+    border-radius: 10px 10px 10px 10px;
+    margin: 10px 10px 10px 10px;
+}
+
+.trx .list-group-item{
+    background-color: #F2F2F2;
+}
