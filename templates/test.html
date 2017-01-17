@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Network Analysis: PageRank Algo
+    </title>
+    <link rel="stylesheet" href="/css/reset.css" type="text/css" />
+    <script type="text/javascript" src="/js/jquery.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/d3.js"></script>
+    <script type="text/javascript" src="/js/queue.js"></script>
+    <script type="text/javascript" src="/js/pagerank.js"></script>
+    <script type="text/javascript" src="/js/force_static.js"></script>
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="/css/pagerank.css" type="text/css" />
+
+
+</head>
+
+<body>
+    <center>
+    <div id="config" style="visibility : hidden">
+                        <div id ="addIPAddress">
+                            <div id ="configInstruction">
+                                Bind Your Nodes to specific IPs!<br>
+                                To Insert more Nodes click on Insert Nodes. <br>
+                                Make sure to click on Save button to bind the IPs.<br>
+                                Click on Close to return back to the Visualization.<br>
+                            </div>  
+                            <ul class = "list-group">
+                               <li class = "list-group-item">A: <input type="text"></li>
+                               <li class = "list-group-item">B: <input type="text"></li>
+                               <li class = "list-group-item">C: <input type="text"></li>
+                               <li class = "list-group-item">D: <input type="text"></li>
+                               <li class = "list-group-item">E: <input type="text"></li>
+                            </ul>
+                            <input class="black" type="submit" value="Insert Nodes" onclick="insertNode()">
+                            <input class="black" type="submit" value="Save" onclick="saveNode()">
+                            <input class="black" type="submit" value="Close" onclick="closeConfig()">
+                    
+                            
+                        </div>
+                    </div>
+    </center>
+
+    <div>
+
+        <center>
+            <h2>IDENTIFICATION OF VULNERABLE NODE</h2></center>
+
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class ="col-lg-12">
+                <center>
+                    
+                    <input class="black" type="submit" value="Visualize Static Graph" 
+                    onclick="initStaticGraph()">
+                    <input class="black" type="submit" value="Bind IP Addresses to Nodes" 
+                    onclick="showConfigScreen()">
+                    <input class="black" type="submit" value="Start Transfers" onclick="startPolling()">
+                    <input class="black" type="submit" value="Stop Transfers" onclick="stopPolling()">
+
+                </center>
+            </div>
+            <div class ="col-lg-12">
+                <center>
+                <div id="trxList" >
+                    <p>
+                        Current Tranfer Status...
+                    </p>
+                    <ul class = "trx list-group">
+                                       
+                    </ul>
+                </div>
+                </center>
+            </div>
+            <div class=" col-sm-12 col-md-6 col-lg-6">
+                <div id="viz1">
+                    <!-- <div class="row"> -->
+                    <div class="viz-head theoretical col-sm-12 col-md-6 col-lg-12">
+                        <center>
+                        Theoretical Presentation of PageRank on a Network<br>
+                        
+                        </center>
+                    </div>
+                
+                    <div class="viz-body theoretical col-sm-12 col-md-6 col-lg-12">
+                        <div id="theoretical"></div>
+                    </div>
+                <!-- </div> -->
+                </div>
+            </div>
+            <div class=" col-sm-12 col-md-6 col-lg-6">
+                <center>
+                    <div id="splash" style="visibility : hidden">
+                        <div id ="loader">
+                            <img src="images/pie-loading.gif"></img> <br>
+                    
+                            <strong><p style ="color : orange"> Please wait...</p> </strong>
+                        </div>
+                    </div>
+                </center>
+                <div id="viz2">
+                    <!-- <div class="row"> -->
+                    <div class="viz-head practical col-sm-12 col-md-6 col-lg-12">
+                        <center>
+                        Practical Approach of PageRank on a Network<br>
+                        </center>
+                    </div>
+                    
+                    <div class="viz-body practical col-sm-12 col-md-6 col-lg-12">
+                        <div id="practical"></div>
+                    </div>
+                <!-- </div> -->
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
